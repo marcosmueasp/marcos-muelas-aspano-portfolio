@@ -17,7 +17,7 @@
 
 /* ===== Efecto CRT / fósforo ===== */
 @layer components {
-  /* Scanlines + viñeta solo cuando CRT activo */
+  /* Scanlines + viñeta solo cuando CRT activo (al fondo, no tapa el texto) */
   .crt-on .crt-overlay {
     opacity: 1;
   }
@@ -26,15 +26,15 @@
     pointer-events: none;
     position: fixed;
     inset: 0;
-    z-index: 50;
+    z-index: 0;
     transition: opacity 0.3s ease;
-    /* scanlines */
+    /* scanlines finas (1px) */
     background: repeating-linear-gradient(
       to bottom,
       transparent 0px,
       transparent 2px,
-      rgba(0, 0, 0, 0.18) 3px,
-      rgba(0, 0, 0, 0.18) 4px
+      rgba(0, 0, 0, 0.06) 2px,
+      rgba(0, 0, 0, 0.06) 3px
     );
   }
   .crt-on .crt-vignette {
@@ -45,9 +45,9 @@
     pointer-events: none;
     position: fixed;
     inset: 0;
-    z-index: 50;
+    z-index: 0;
     transition: opacity 0.3s ease;
-    background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.45) 100%);
+    background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.22) 100%);
   }
 
   /* Glow fósforo solo en dark + CRT */

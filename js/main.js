@@ -3,6 +3,16 @@
 (function () {
   const root = document.documentElement;
 
+  // Salto directo a la sección si la URL trae hash (p. ej. al cambiar de
+  // idioma): evita la animación del scroll suave en la carga inicial.
+  // Se restaura después para que la navegación interna siga siendo suave.
+  if (location.hash) {
+    root.style.scrollBehavior = 'auto';
+    window.addEventListener('load', function () {
+      setTimeout(function () { root.style.removeProperty('scroll-behavior'); }, 50);
+    });
+  }
+
   // --- Estado inicial (antes de pintar para evitar flash) ---
   // El script inline del <head> ya pone .dark / .crt-on, aquí sincronizamos botones.
 
@@ -14,8 +24,10 @@
     if (mode === 'dark') root.classList.add('dark');
     else root.classList.remove('dark');
     try { localStorage.setItem('theme', mode); } catch (e) {}
+    const isEn = document.documentElement.lang === 'en';
     document.querySelectorAll('[data-theme-label]').forEach(function (el) {
-      el.textContent = mode === 'dark' ? '☾ osc' : '☀ cla';
+      if (mode === 'dark') el.textContent = isEn ? 'Dark' : 'Oscuro';
+      else el.textContent = isEn ? 'Light' : 'Claro';
     });
     document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
       btn.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
@@ -29,7 +41,11 @@
     document.querySelectorAll('[data-crt-toggle]').forEach(function (btn) {
       btn.setAttribute('aria-pressed', on ? 'true' : 'false');
       const label = btn.querySelector('[data-crt-label]');
-      if (label) label.textContent = on ? 'CRT:ON' : 'CRT:OFF';
+      const isEn = document.documentElement.lang === 'en';
+      if (label) {
+        if (on) label.textContent = isEn ? 'CRT enabled' : 'CRT activado';
+        else label.textContent = isEn ? 'CRT disabled' : 'CRT desactivado';
+      }
     });
   }
 
@@ -49,6 +65,29 @@
   // Sincronizar UI al cargar
   setTheme(getTheme());
   setCrt(root.classList.contains('crt-on'));
+
+  // Cambiar de idioma conservando la sección visible (ES <-> EN)
+  var ES_TO_EN = {
+    'como-trabajo': 'how-i-work',
+    'experiencia': 'experience',
+    'proyectos': 'projects',
+    'tech': 'tech',
+    'formacion': 'education',
+    'contacto': 'contact',
+    'top': 'top'
+  };
+  var EN_TO_ES = {};
+  Object.keys(ES_TO_EN).forEach(function (k) { EN_TO_ES[ES_TO_EN[k]] = k; });
+  document.querySelectorAll('[data-lang-link]').forEach(function (link) {
+    link.addEventListener('click', function (ev) {
+      var current = (location.hash || '#top').replace('#', '') || 'top';
+      var toEn = link.getAttribute('data-lang-link') === 'en';
+      var target = (toEn ? ES_TO_EN : EN_TO_ES)[current] || 'top';
+      ev.preventDefault();
+      var base = link.getAttribute('href').split('#')[0];
+      location.href = base + '#' + target;
+    });
+  });
 
   // Menú móvil
   const menuBtn = document.querySelector('[data-menu-btn]');
@@ -74,7 +113,7 @@
       try {
         await navigator.clipboard.writeText(email);
         if (msg) {
-          msg.textContent = btn.dataset.okText || '¡copiado!';
+          msg.textContent = btn.dataset.okText || (document.documentElement.lang === 'en' ? 'Copied!' : '¡Copiado!');
           setTimeout(function () { msg.textContent = ''; }, 2000);
         }
       } catch (e) {
