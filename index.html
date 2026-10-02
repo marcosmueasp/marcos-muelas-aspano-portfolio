@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es" class="dark crt-on">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcos Muelas Áspano — Desarrollador Full-Stack Java + Angular</title>
+  <meta name="description" content="Portfolio de Marcos Muelas Áspano: desarrollo Full-Stack Java/Spring Boot + Angular, clean code, testing y CI/CD.">
+  <meta property="og:title" content="Marcos Muelas Áspano — Portfolio">
+  <meta property="og:description" content="Full-Stack Java + Angular | Spring Boot | Testing | CI/CD">
+  <meta property="og:type" content="website">
+  <script>
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light') document.documentElement.classList.remove('dark');
+      else document.documentElement.classList.add('dark');
+      var c = localStorage.getItem('crt');
+      if (c === 'off') document.documentElement.classList.remove('crt-on');
+      else document.documentElement.classList.add('crt-on');
+    } catch (e) { document.documentElement.classList.add('dark', 'crt-on'); }
+  </script>
+  <link rel="stylesheet" href="./dist/output.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body class="bg-paper text-stone-900 dark:bg-[#0a0f0a] dark:text-green-300 min-h-screen font-mono">
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <div class="crt-vignette" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="sticky top-0 z-40 border-b border-stone-300 dark:border-green-900/60 bg-paper/90 dark:bg-black/80 backdrop-blur">
+    <nav class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between gap-2" aria-label="Principal">
+      <a href="#top" class="phosphor font-bold tracking-tight text-sm sm:text-base">
+        &gt; marcos_muelas<span class="cursor-blink"></span>
+      </a>
+      <div class="hidden md:flex items-center gap-5 text-sm">
+        <a href="#como-trabajo" class="hover:underline">cómo_trabajo</a>
+        <a href="#experiencia" class="hover:underline">experiencia</a>
+        <a href="#proyectos" class="hover:underline">proyectos</a>
+        <a href="#tech" class="hover:underline">tech</a>
+        <a href="#formacion" class="hover:underline">formación</a>
+        <a href="#contacto" class="px-3 py-1 border border-stone-400 dark:border-green-700 rounded hover:bg-stone-900 hover:text-white dark:hover:bg-green-500 dark:hover:text-black">contacto</a>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <!-- TODO: idioma: en.html es la versión en inglés -->
+        <a href="./en.html" class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded" hreflang="en">EN</a>
+        <button data-theme-toggle class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-pressed="true" title="Claro / oscuro"><span data-theme-label>☾ osc</span></button>
+        <button data-crt-toggle class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded hidden sm:block" aria-pressed="true" title="Efecto CRT"><span data-crt-label>CRT:ON</span></button>
+        <button data-menu-btn class="md:hidden px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-expanded="false" aria-label="Abrir menú">≡</button>
+      </div>
+    </nav>
+    <div data-mobile-menu class="hidden md:hidden border-t border-stone-300 dark:border-green-900/60 px-4 py-3 flex flex-col gap-2 text-sm bg-paper dark:bg-black">
+      <a href="#como-trabajo">cómo_trabajo</a>
+      <a href="#experiencia">experiencia</a>
+      <a href="#proyectos">proyectos</a>
+      <a href="#tech">tech</a>
+      <a href="#formacion">formación</a>
+      <a href="#contacto">contacto</a>
+    </div>
+  </header>
+
+  <main id="top" class="max-w-5xl mx-auto px-4 pb-20">
+    <!-- ===== HERO ===== -->
+    <section class="py-12 sm:py-16 grid md:grid-cols-[1.2fr_.8fr] gap-8 items-center">
+      <div>
+        <p class="text-xs sm:text-sm border border-stone-400 dark:border-green-700 rounded-full inline-block px-3 py-1 mb-4">● disponible_para_nuevos_retos</p>
+        <h1 class="phosphor crt-flicker text-3xl sm:text-5xl font-bold leading-tight">
+          Marcos Muelas Áspano<br>
+          <span class="text-lg sm:text-2xl font-normal">Desarrollador Full-Stack Java + Angular</span>
+        </h1>
+        <p class="mt-4 text-sm sm:text-base opacity-90 max-w-xl">
+          Full-Stack Developer con más de 2 años de experiencia en aplicaciones web para la administración pública.
+          Diseño e implemento funcionalidades end-to-end y APIs REST aplicando SOLID y clean code, con compromiso con la calidad, los plazos y el trabajo en equipo Agile/Scrum.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3 text-sm">
+          <a href="#contacto" class="px-4 py-2 bg-stone-900 text-white dark:bg-green-500 dark:text-black rounded font-bold">./contactar.sh</a>
+          <a href="#proyectos" class="px-4 py-2 border border-stone-400 dark:border-green-700 rounded">ver_proyectos</a>
+          <!-- TODO: sube tu CV real a assets/cv.pdf -->
+          <a href="./assets/cv.pdf" class="px-4 py-2 border border-stone-400 dark:border-green-700 rounded" download>↓ CV.pdf</a>
+        </div>
+        <p class="mt-4 text-xs opacity-70">$ ubicación: Valencia, España · remoto/híbrido · ES/VA/EN</p>
+      </div>
+      <div class="border border-stone-400 dark:border-green-700 rounded-lg bg-white dark:bg-black/50 card-glow text-xs sm:text-sm overflow-hidden">
+        <div class="border-b border-stone-300 dark:border-green-900/60 px-3 py-2 flex gap-1.5" aria-hidden="true">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-yellow-500 inline-block"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-green-500 inline-block"></span>
+        </div>
+        <div class="p-4 leading-relaxed">
+          <p><span class="opacity-60">$</span> whoami</p>
+          <p>full-stack · java_17 · spring-boot · angular</p>
+          <p class="mt-2"><span class="opacity-60">$</span> cat principios.txt</p>
+          <p>clean-code · testing · ci/cd · docs</p>
+          <p class="mt-2"><span class="opacity-60">$</span> ./buscar_colaboracion <span class="cursor-blink"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 01 CÓMO TRABAJO ===== -->
+    <section id="como-trabajo" class="py-10 scroll-mt-16">
+      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">01_cómo_trabajo</h2>
+      <p class="text-sm opacity-80 mb-6">// End-to-end, con calidad y sin sobreingeniería. Agile/Scrum, SOLID y clean code.</p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+          <h3 class="font-bold mb-1">🧱 Funcionalidades end-to-end</h3>
+          <p class="text-sm opacity-80">Desarrollo completo: backend y frontend, despliegue y puesta en producción. Código que otro dev entiende en 5 min.</p>
+        </article>
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+          <h3 class="font-bold mb-1">🧪 Testing y QA</h3>
+          <p class="text-sm opacity-80">Testing en backend y frontend, planes de pruebas y pruebas cruzadas. Confianza para refactorizar y desplegar.</p>
+        </article>
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+          <h3 class="font-bold mb-1">🔁 Integración y calidad</h3>
+          <p class="text-sm opacity-80">CI/CD, análisis de calidad de código y resolución proactiva de incidencias. Pipelines que avisan antes de romper prod.</p>
+        </article>
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+          <h3 class="font-bold mb-1">📝 Equipo y organización</h3>
+          <p class="text-sm opacity-80">Scrum/Kanban, Jira, documentación de decisiones y contratos API. Comunicación eficaz, gestión del tiempo y aprendizaje continuo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 02 EXPERIENCIA ===== -->
+    <section id="experiencia" class="py-10 scroll-mt-16">
+      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">02_experiencia</h2>
+      <p class="text-sm opacity-80 mb-6">// Más de 2 años en aplicaciones web para la administración pública y empresa privada.</p>
+      <ol class="relative border-l border-stone-300 dark:border-green-800 ml-2 space-y-6">
+        <li class="ml-4">
+          <div class="absolute -left-[5px] mt-1.5 w-2.5 h-2.5 rounded-full bg-stone-900 dark:bg-green-500"></div>
+          <p class="text-xs opacity-70">Jul 2023 — Abr 2026 · Sopra Steria · Valencia</p>
+          <h3 class="font-bold">Full-Stack Developer (Java + Angular/ZK)</h3>
+          <p class="text-sm opacity-80 mt-1">Desarrollo y evolución de 3 aplicaciones de gestión para la administración pública, participando en el ciclo completo: desarrollo, despliegue y puesta en producción.</p>
+          <p class="text-sm opacity-80 mt-1">Diseño e implementación de nuevas funcionalidades en backend y frontend. Participación en QA con planes de pruebas y pruebas cruzadas, y resolución proactiva de incidencias.</p>
+        </li>
+        <li class="ml-4">
+          <div class="absolute -left-[5px] mt-1.5 w-2.5 h-2.5 rounded-full bg-stone-400 dark:bg-green-800"></div>
+          <p class="text-xs opacity-70">Abr 2026 — May 2026 · Datadec · Valencia</p>
+          <h3 class="font-bold">Full-Stack Developer (Java + Vue)</h3>
+          <p class="text-sm opacity-80 mt-1">Desarrollo full-stack de un GMAO, aplicación de gestión de mantenimientos para empresas, con participación en módulos de inventario, albaranes, generación de documentos, nóminas y horarios.</p>
+        </li>
+        <li class="ml-4">
+          <div class="absolute -left-[5px] mt-1.5 w-2.5 h-2.5 rounded-full bg-stone-400 dark:bg-green-800"></div>
+          <p class="text-xs opacity-70">Mar 2019 — May 2019 · GEDItec Ingeniería · Valencia</p>
+          <h3 class="font-bold">Delineante</h3>
+          <p class="text-sm opacity-80 mt-1">Tareas propias del puesto en proyectos de ingeniería.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== 03 PROYECTOS ===== -->
+    <section id="proyectos" class="py-10 scroll-mt-16">
+      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">03_proyectos_personales</h2>
+      <p class="text-sm opacity-80 mb-6">// En producción y en código abierto.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow flex flex-col">
+          <h3 class="font-bold">Let's Focus — Pomodoro</h3>
+          <p class="text-sm opacity-80 mt-1 flex-1">App de productividad con prioridades basada en la técnica Pomodoro para uso personal. Publicada en Play Store.</p>
+          <p class="text-xs mt-2 opacity-70">react-native · expo · tailwind · supabase</p>
+          <div class="mt-3 flex gap-3 text-sm">
+            <a href="https://play.google.com/store/apps/details?id=com.letsfocus.app" class="underline">play_store ↗</a>
+          </div>
+        </article>
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow flex flex-col">
+          <h3 class="font-bold">este-portfolio</h3>
+          <p class="text-sm opacity-80 mt-1 flex-1">Esta web: HTML5 + Tailwind CLI, 100% estática, ES/EN, claro/oscuro, efecto CRT. Lighthouse &gt;95.</p>
+          <p class="text-xs mt-2 opacity-70">html5 · tailwind · vanilla-js</p>
+          <div class="mt-3 flex gap-3 text-sm">
+            <a href="https://github.com/TU_USUARIO" class="underline">código ↗</a>
+            <a href="#top" class="underline opacity-60">demo ↗</a>
+          </div>
+        </article>
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow flex flex-col">
+          <h3 class="font-bold">más_en_github</h3>
+          <p class="text-sm opacity-80 mt-1 flex-1">Experimentos con Java, Angular, testing y calidad. Pregúntame por repos privados de empresa (no publicables por confidencialidad).</p>
+          <p class="text-xs mt-2 opacity-70">java · angular · junit · sonarqube</p>
+          <div class="mt-3 flex gap-3 text-sm">
+            <a href="https://github.com/TU_USUARIO" class="underline">github ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 04 TECH ===== -->
+    <section id="tech" class="py-10 scroll-mt-16">
+      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">04_tecnologías</h2>
+      <p class="text-sm opacity-80 mb-6">// Lo que uso a diario + metodologías Scrum, Kanban y QA.</p>
+
+      <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">$ frontend</h3>
+      <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/angular.svg" alt="Angular" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Angular</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/vue.svg" alt="Vue" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Vue</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/typescript.svg" alt="TypeScript" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">TypeScript</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/javascript.svg" alt="JavaScript" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JavaScript</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/jest.svg" alt="Jest" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Jest</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/react-native.svg" alt="React Native" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">React Native</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/expo.svg" alt="Expo" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Expo</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/tailwind.svg" alt="Tailwind CSS" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Tailwind</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/thymeleaf.svg" alt="Thymeleaf" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Thymeleaf</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/bootstrap.svg" alt="Bootstrap" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Bootstrap</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/zk.svg" alt="ZK Framework" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">ZK</p></div>
+      </div>
+
+      <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">$ backend</h3>
+      <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/java.svg" alt="Java" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Java 8/17</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/spring-boot.svg" alt="Spring Boot" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Spring Boot</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/jpa-hibernate.svg" alt="JPA Hibernate" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JPA/Hibernate</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/rest.svg" alt="APIs REST" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">REST</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/maven.svg" alt="Maven" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Maven</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/mockito.svg" alt="Mockito" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Mockito</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/junit.svg" alt="JUnit" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JUnit</p></div>
+      </div>
+
+      <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">$ calidad_e_integración</h3>
+      <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/jenkins.svg" alt="Jenkins" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Jenkins</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/sonarqube.svg" alt="SonarQube" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SonarQube</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/gitlab-cicd.svg" alt="GitLab CI/CD" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">GitLab CI/CD</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/git.svg" alt="Git" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Git</p></div>
+      </div>
+
+      <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">$ bases_de_datos</h3>
+      <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/oracle.svg" alt="Oracle SQL" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Oracle SQL</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/sqldeveloper.svg" alt="SQL Developer" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SQL Dev</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/mysql.svg" alt="MySQL" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">MySQL</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/postgresql.svg" alt="PostgreSQL" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">PostgreSQL</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/supabase.svg" alt="Supabase" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Supabase</p></div>
+      </div>
+
+      <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">$ herramientas</h3>
+      <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/svn.svg" alt="SVN" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SVN</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/postman.svg" alt="Postman" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Postman</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/jira.svg" alt="Jira" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Jira</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/obsidian.svg" alt="Obsidian" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Obsidian</p></div>
+      </div>
+    </section>
+
+    <!-- ===== 05 FORMACIÓN E IDIOMAS ===== -->
+    <section id="formacion" class="py-10 scroll-mt-16">
+      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">05_formación_e_idiomas</h2>
+      <p class="text-sm opacity-80 mb-6">// Base académica + comunicación en 3 idiomas.</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+          <h3 class="font-bold mb-2">🎓 estudios</h3>
+          <p class="font-bold text-sm">Grado en Ingeniería Informática</p>
+          <p class="text-sm opacity-80">Universitat Politècnica de València (UPV) — Campus de Alcoy | 2019 — 2023</p>
+          <p class="text-sm opacity-80 mt-2">Metodologías: Scrum, Kanban, QA (planes de pruebas y pruebas cruzadas). Principios SOLID y clean code.</p>
+        </article>
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+          <h3 class="font-bold mb-2">🌍 idiomas_y_competencias</h3>
+          <ul class="text-sm opacity-90 space-y-1">
+            <li>Español — nativo</li>
+            <li>Valenciano — nativo</li>
+            <li>Inglés — B2 (First)</li>
+          </ul>
+          <p class="text-sm opacity-80 mt-3">Compromiso con la calidad y los plazos · trabajo en equipo · resolución de problemas · organización · aprendizaje continuo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 06 CONTACTO ===== -->
+    <section id="contacto" class="py-10 scroll-mt-16">
+      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">06_contacto</h2>
+      <p class="text-sm opacity-80 mb-6">// Respondo en 24-48h. Para reclutadores: email directo + LinkedIn + CV.</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+          <h3 class="font-bold mb-3"> contacting --directo </h3>
+          <!-- TODO: cambia TU_EMAIL@example.com por tu email real (2 sitios: mailto + data-copy + form action) -->
+          <p class="text-sm break-all">
+            <a href="mailto:TU_EMAIL@example.com" class="underline font-bold">TU_EMAIL@example.com</a>
+          </p>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">
+            <a href="mailto:TU_EMAIL@example.com?subject=Contacto%20portfolio" class="px-3 py-1.5 bg-stone-900 text-white dark:bg-green-500 dark:text-black rounded">✉ enviar_correo</a>
+            <button data-copy-email="TU_EMAIL@example.com" data-ok-text="¡copiado!" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded">⧉ copiar</button>
+          </div>
+          <p data-copy-msg class="text-xs mt-2 h-4"></p>
+          <div class="mt-2 flex flex-wrap gap-2 text-sm">
+            <!-- TODO: pon tus URLs reales -->
+            <a href="https://linkedin.com/in/TU_USUARIO" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded">in LinkedIn ↗</a>
+            <a href="https://github.com/TU_USUARIO" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded">gh GitHub ↗</a>
+            <a href="./assets/cv.pdf" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded" download>↓ CV</a>
+          </div>
+        </div>
+        <form action="https://formsubmit.co/TU_EMAIL@example.com" method="POST" class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow text-sm">
+          <h3 class="font-bold mb-3">formulario --sin-backend</h3>
+          <input type="hidden" name="_subject" value="Contacto portfolio">
+          <input type="hidden" name="_captcha" value="false">
+          <label class="block mb-3">nombre<input required name="name" class="mt-1 w-full bg-transparent border border-stone-300 dark:border-green-900 rounded px-3 py-2" placeholder="Tu nombre"></label>
+          <label class="block mb-3">email<input required type="email" name="email" class="mt-1 w-full bg-transparent border border-stone-300 dark:border-green-900 rounded px-3 py-2" placeholder="tu@email.com"></label>
+          <label class="block mb-3">mensaje<textarea required name="message" rows="4" class="mt-1 w-full bg-transparent border border-stone-300 dark:border-green-900 rounded px-3 py-2" placeholder="Hola Marcos, ..."></textarea></label>
+          <button class="w-full px-4 py-2 bg-stone-900 text-white dark:bg-green-500 dark:text-black rounded font-bold">./enviar_mensaje.sh</button>
+          <p class="text-xs opacity-60 mt-2">Activa el form cambiando TU_EMAIL por tu email en el action (FormSubmit, gratis).</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-stone-300 dark:border-green-900/60">
+    <div class="max-w-5xl mx-auto px-4 py-6 text-xs flex flex-wrap gap-2 justify-between opacity-70">
+      <p>© <span data-year>2026</span> marcos_muelas — html5 + tailwind_cli</p>
+      <p><a href="./en.html" class="underline" hreflang="en">English version</a> · <a href="#top" class="underline">↑ top</a></p>
+    </div>
+  </footer>
+</body>
+</html>
