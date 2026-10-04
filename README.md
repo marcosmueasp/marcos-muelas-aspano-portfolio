@@ -24,7 +24,7 @@ Abrir `index.html` en el navegador (o servir con `npx serve .`).
 2. Crea un formulario gratis en https://formspree.io y pega tu ID en el `action` (`TU_FORM_ID` / `YOUR_FORM_ID`). Incluye honeypot `_gotcha` antispam.
 3. Sube tu CV real a `assets/cv.pdf` (ahora hay un `.placeholder`).
 2. Sube tu CV real a `assets/cv.pdf` (ahora hay un `.placeholder`).
-3. Iconos en `assets/icons/*.svg` — son placeholders monograma, cámbialos por SVGs oficiales si quieres.
+3. Iconos en `assets/icons/` — logos oficiales locales (Simple Icons CC0 v16.34.0, Devicon v2.17.0 v. MIT, ZKOSS y Mockito oficiales, OpenAI v13). Solo `rest.svg` sigue monograma propio (REST no tiene logo).
 4. Rebuild: `npm run build` y commit de `dist/output.css` (necesario para GitHub Pages sin CI).
 
 ## Deploy GitHub Pages

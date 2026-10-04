@@ -25,6 +25,14 @@
     margin-left: 2px;
     animation: blink 1.1s steps(1) infinite;
   }
+
+  /* Logos oscuros (Expo, OpenCode, Copilot, GPT): en blanco solo en modo oscuro */
+  .dark img[src*="expo.svg"],
+  .dark img[src*="opencode.svg"],
+  .dark img[src*="github-copilot.svg"],
+  .dark img[src*="gpt.svg"] {
+    filter: invert(1);
+  }
 }
 
 @keyframes blink {
