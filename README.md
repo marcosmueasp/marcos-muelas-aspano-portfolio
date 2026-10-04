@@ -1,30 +1,44 @@
-# marcos-muelas-aspano-portfolio
+# Marcos Muelas Aspano — Portfolio
 
-Portfolio personal — HTML5 + Tailwind CSS CLI. Ligero (~13KB CSS), sin frameworks JS.
+Desarrollador Full-Stack/Backend (Java + Angular) · Valencia, España. Portfolio personal con mi experiencia, proyectos y tecnologías.
 
-- `index.html` → español (principal)
-- `en.html` → English version
-- Modo claro/oscuro (con memoria `localStorage`)
-- 6 secciones: cómo trabajo / formación e idiomas / experiencia / proyectos / tecnologías con iconos / contacto
-- Contacto anti-spam para reclutadores: sin email en el repo, LinkedIn/GitHub + CV + formulario (Formspree con ID, email solo en su servidor)
+🌐 **Demo en vivo:** https://marcosmueasp.github.io/marcos-muelas-aspano-portfolio/ · English version: `/en.html`
 
-## Uso
+![Captura del portfolio](assets/screenshot.png)
+
+## Qué contiene
+
+- Cómo trabajo · Formación e idiomas · Experiencia · Proyectos personales (con estado) · Tecnologías con logos oficiales · Contacto
+- Español e inglés, modo claro/oscuro con memoria, diseño responsive
+
+## Stack
+
+HTML5 + Tailwind CSS (CLI) + JavaScript vanilla. Sin frameworks: CSS compilado de ~13KB, iconos oficiales locales (Simple Icons, Devicon), 100% estático para GitHub Pages.
+
+## Decisiones técnicas
+
+- **Ultraligera sin frameworks:** una landing no necesita React; HTML + Tailwind purgado carga al instante.
+- **Bilingüe con dos HTML estáticos** (`index.html`/`en.html`) en vez de i18n con JS: más simple y mejor SEO.
+- **Contacto anti-spam:** sin email en el código (botón que lo monta al pulsar) ni backend; LinkedIn/GitHub/CV como vías directas.
+
+## Uso local
 
 ```powershell
 npm install
 npm run build   # genera dist/output.css minificado
 npm run dev     # watch mientras editas HTML
+npx serve .     # ver en http://localhost:3000
 ```
 
-Abrir `index.html` en el navegador (o servir con `npx serve .`).
+Despliegue: Settings → Pages → Deploy from branch → `main` / root.
 
-## Personalizar (TODOs en el código)
+## Personalizar
 
-1. Busca `TU_USUARIO` / `YOUR_USER` en `index.html` / `en.html` y pon tu LinkedIn y GitHub. El email no va en el repo por seguridad.
-2. CV en `assets/CV_Marcos.pdf` (ya publicado para descarga).
-3. Iconos en `assets/icons/` — logos oficiales locales (Simple Icons CC0 v16.34.0, Devicon v2.17.0 v. MIT, ZKOSS y Mockito oficiales, OpenAI v13). Solo `rest.svg` sigue monograma propio (REST no tiene logo).
-4. Rebuild: `npm run build` y commit de `dist/output.css` (necesario para GitHub Pages sin CI).
+1. El email no va en el repo por seguridad (botón de correo fragmentado en el HTML).
+2. CV descargable en `assets/CV_Marcos.pdf`.
+3. Rebuild tras cambios: `npm run build` y commit de `dist/output.css`.
 
-## Deploy GitHub Pages
+## Contacto profesional
 
-Settings → Pages → Deploy from branch → `main` / root. La web es 100% estática.
+- LinkedIn: https://www.linkedin.com/in/marcos-muelas-aspano/
+- GitHub: https://github.com/marcosmueasp
