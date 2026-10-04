@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,9 @@
   <script>
     try {
       var t = localStorage.getItem('theme');
-      if (t === 'light') document.documentElement.classList.remove('dark');
-      else document.documentElement.classList.add('dark');
-    } catch (e) { document.documentElement.classList.add('dark'); }
+      if (t === 'dark') document.documentElement.classList.add('dark');
+      else document.documentElement.classList.remove('dark');
+    } catch (e) { document.documentElement.classList.remove('dark'); }
   </script>
   <link rel="stylesheet" href="./dist/output.css">
   <script src="./js/main.js" defer></script>
@@ -37,7 +37,7 @@
       <div class="flex items-center gap-2 text-xs">
         <!-- TODO: idioma: en.html es la versión en inglés -->
         <a href="./en.html" data-lang-link="en" class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded" hreflang="en">EN</a>
-        <button data-theme-toggle class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-pressed="true" title="Claro / oscuro"><span data-theme-label>Oscuro</span></button>
+        <button data-theme-toggle class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-pressed="false" title="Claro / oscuro"><span data-theme-label>Claro</span></button>
         <button data-menu-btn class="md:hidden px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-expanded="false" aria-label="Abrir menú">Menú</button>
       </div>
     </nav>
@@ -67,8 +67,7 @@
         <div class="mt-6 flex flex-wrap gap-3 text-sm">
           <a href="#contacto" class="px-4 py-2 bg-stone-900 text-white dark:bg-green-500 dark:text-black rounded font-bold">Contactar</a>
           <a href="#proyectos" class="px-4 py-2 border border-stone-400 dark:border-green-700 rounded">Ver proyectos</a>
-          <!-- TODO: sube tu CV real a assets/cv.pdf -->
-          <a href="./assets/cv.pdf" class="px-4 py-2 border border-stone-400 dark:border-green-700 rounded" download>Descargar CV</a>
+          <a href="./assets/CV_Marcos.pdf" class="px-4 py-2 border border-stone-400 dark:border-green-700 rounded" download>Descargar CV</a>
         </div>
         <p class="mt-4 text-xs opacity-70">Ubicación: Valencia, España · Remoto/Híbrido · ES/VA/EN</p>
       </div>
@@ -114,7 +113,7 @@
 
     <!-- ===== FORMACIÓN E IDIOMAS ===== -->
     <section id="formacion" class="py-10 scroll-mt-16">
-      <h2 class="text-xl sm:text-2xl font-bold mb-2">Formación e idiomas</h2>
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">Formación</h2>
       <p class="text-sm opacity-80 mb-6">Base académica y comunicación en tres idiomas.</p>
       <div class="grid md:grid-cols-2 gap-4">
         <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
@@ -167,8 +166,8 @@
 
     <!-- ===== PROYECTOS ===== -->
     <section id="proyectos" class="py-10 scroll-mt-16">
-      <h2 class="text-xl sm:text-2xl font-bold mb-2">Proyectos personales</h2>
-      <p class="text-sm opacity-80 mb-6">En producción y en código abierto.</p>
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">Proyectos</h2>
+      <p class="text-sm opacity-80 mb-6">Proyectos en producción y en código abierto.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 flex flex-col">
           <h3 class="font-bold">Let's Focus — Pomodoro</h3>
@@ -234,7 +233,8 @@
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/java.svg" alt="Java" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Java 8/17</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/spring-boot.svg" alt="Spring Boot" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Spring Boot</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/jpa-hibernate.svg" alt="JPA Hibernate" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JPA/Hibernate</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/rest.svg" alt="APIs REST" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">REST</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/rest.svg" alt="API REST" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">API REST</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/soap.svg" alt="SOAP" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SOAP</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/maven.svg" alt="Maven" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Maven</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/mockito.png" alt="Mockito" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Mockito</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/junit.svg" alt="JUnit" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JUnit</p></div>
@@ -276,8 +276,8 @@
     <!-- ===== CONTACTO ===== -->
     <section id="contacto" class="py-10 scroll-mt-16">
       <h2 class="text-xl sm:text-2xl font-bold mb-2">Contacto</h2>
-      <p class="text-sm opacity-80 mb-6">Respondo en 24-48h. Por seguridad no publico mi email: usa LinkedIn o el formulario.</p>
-      <div class="grid md:grid-cols-2 gap-4">
+      <p class="text-sm opacity-80 mb-6">Respondo en 24-48h. Por seguridad no publico mi email: usa LinkedIn o el botón de correo.</p>
+      <div class="max-w-2xl">
         <div class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
           <h3 class="font-bold mb-3">Canales directos</h3>
           <p class="text-sm opacity-80">Escríbeme por LinkedIn, revisa mi GitHub o descarga mi CV. Sin spam: mi email no aparece en esta web.</p>
@@ -285,21 +285,11 @@
             <!-- TODO: pon tus URLs reales -->
             <a href="https://linkedin.com/in/TU_USUARIO" class="px-3 py-1.5 bg-stone-900 text-white dark:bg-green-500 dark:text-black rounded">LinkedIn</a>
             <a href="https://github.com/TU_USUARIO" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded">GitHub</a>
-            <a href="./assets/cv.pdf" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded" download>Descargar CV</a>
+            <a href="./assets/CV_Marcos.pdf" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded" download>Descargar CV</a>
+            <button type="button" data-email-user="marcos98est" data-email-domain="gmail.com" data-email-subject="Contacto portfolio" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded">Enviar correo</button>
           </div>
           <p class="text-xs opacity-60 mt-3">Valencia, España · Remoto/Híbrido · ES/VA/EN</p>
         </div>
-        <!-- TODO: crea un formulario gratis en https://formspree.io y pega tu ID en el action. Tu email queda solo en Formspree, nunca en este repo. -->
-        <form action="https://formspree.io/f/TU_FORM_ID" method="POST" class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 text-sm">
-          <h3 class="font-bold mb-3">Envíame un mensaje</h3>
-          <input type="hidden" name="_subject" value="Contacto portfolio">
-          <label class="block mb-3">Nombre<input required name="name" class="mt-1 w-full bg-transparent border border-stone-300 dark:border-green-900 rounded px-3 py-2" placeholder="Tu nombre"></label>
-          <label class="block mb-3">Email<input required type="email" name="email" class="mt-1 w-full bg-transparent border border-stone-300 dark:border-green-900 rounded px-3 py-2" placeholder="tu@email.com"></label>
-          <label class="block mb-3">Mensaje<textarea required name="message" rows="4" class="mt-1 w-full bg-transparent border border-stone-300 dark:border-green-900 rounded px-3 py-2" placeholder="Hola Marcos, ..."></textarea></label>
-          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="w-full px-4 py-2 bg-stone-900 text-white dark:bg-green-500 dark:text-black rounded font-bold">Enviar mensaje</button>
-          <p class="text-xs opacity-60 mt-2">Tus datos solo se usan para responder a tu mensaje.</p>
-        </form>
       </div>
     </section>
   </main>

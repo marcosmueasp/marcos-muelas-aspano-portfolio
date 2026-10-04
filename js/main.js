@@ -67,6 +67,20 @@
     });
   });
 
+  // Botón enviar correo: monta usuario@dominio al pulsar
+  // (el email nunca aparece en claro en el HTML)
+  document.querySelectorAll('[data-email-user]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var user = btn.getAttribute('data-email-user') || '';
+      var domain = btn.getAttribute('data-email-domain') || '';
+      var subject = btn.getAttribute('data-email-subject') || '';
+      if (!user || !domain) return;
+      var href = 'mailto:' + user + '@' + domain;
+      if (subject) href += '?subject=' + encodeURIComponent(subject);
+      location.href = href;
+    });
+  });
+
   // Menú móvil
   const menuBtn = document.querySelector('[data-menu-btn]');
   const mobileMenu = document.querySelector('[data-mobile-menu]');
