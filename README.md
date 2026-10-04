@@ -1,14 +1,14 @@
 # Marcos Muelas Aspano — Portfolio
 
-Desarrollador Full-Stack/Backend (Java + Angular) · Valencia, España. Portfolio personal con mi experiencia, proyectos y tecnologías.
+Desarrollador Full-Stack/Backend · Valencia, España. Portfolio personal con mi experiencia, proyectos y tecnologías.
 
-🌐 **Demo en vivo:** https://marcosmueasp.github.io/marcos-muelas-aspano-portfolio/ · English version: `/en.html`
+**Demo en vivo:** https://marcosmueasp.github.io/marcos-muelas-aspano-portfolio/ · English version: `/en.html`
 
 ![Captura del portfolio](assets/screenshot.png)
 
 ## Qué contiene
 
-- Cómo trabajo · Formación e idiomas · Experiencia · Proyectos personales (con estado) · Tecnologías con logos oficiales · Contacto
+- Cómo trabajo · Formación e idiomas · Experiencia · Proyectos personales · Tecnologías con logos oficiales · Contacto
 - Español e inglés, modo claro/oscuro con memoria, diseño responsive
 
 ## Stack
@@ -34,9 +34,8 @@ Despliegue: Settings → Pages → Deploy from branch → `main` / root.
 
 ## Personalizar
 
-1. El email no va en el repo por seguridad (botón de correo fragmentado en el HTML).
-2. CV descargable en `assets/CV_Marcos.pdf`.
-3. Rebuild tras cambios: `npm run build` y commit de `dist/output.css`.
+1. CV descargable en `assets/CV_Marcos.pdf`.
+2. Rebuild tras cambios: `npm run build` y commit de `dist/output.css`.
 
 ## Contacto profesional
 
