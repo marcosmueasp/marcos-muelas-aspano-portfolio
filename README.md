@@ -4,9 +4,9 @@ Portfolio personal — HTML5 + Tailwind CSS CLI. Ligero (~13KB CSS), sin framewo
 
 - `index.html` → español (principal)
 - `en.html` → English version
-- Retro monitor CRT + modo claro/oscuro (con memoria `localStorage`)
-- 5 secciones: cómo trabajo / experiencia / proyectos / tecnologías con iconos / contacto
-- Contacto pensado para reclutadores: `mailto:` + copiar email + LinkedIn/GitHub + CV + formulario opcional (FormSubmit)
+- Modo claro/oscuro (con memoria `localStorage`)
+- 6 secciones: cómo trabajo / formación e idiomas / experiencia / proyectos / tecnologías con iconos / contacto
+- Contacto anti-spam para reclutadores: sin email en el repo, LinkedIn/GitHub + CV + formulario (Formspree con ID, email solo en su servidor)
 
 ## Uso
 
@@ -20,11 +20,12 @@ Abrir `index.html` en el navegador (o servir con `npx serve .`).
 
 ## Personalizar (TODOs en el código)
 
-1. Busca `TU_EMAIL`, `TU_USUARIO` en `index.html` / `en.html` y pon tu email, LinkedIn y GitHub.
+1. Busca `TU_USUARIO` / `YOUR_USER` en `index.html` / `en.html` y pon tu LinkedIn y GitHub. El email no va en el repo por seguridad.
+2. Crea un formulario gratis en https://formspree.io y pega tu ID en el `action` (`TU_FORM_ID` / `YOUR_FORM_ID`). Incluye honeypot `_gotcha` antispam.
+3. Sube tu CV real a `assets/cv.pdf` (ahora hay un `.placeholder`).
 2. Sube tu CV real a `assets/cv.pdf` (ahora hay un `.placeholder`).
-3. Sustituye experiencia y proyectos de ejemplo por los tuyos.
-4. Iconos en `assets/icons/*.svg` — son placeholders monograma, cámbialos por SVGs oficiales si quieres.
-5. Rebuild: `npm run build` y commit de `dist/output.css` (necesario para GitHub Pages sin CI).
+3. Iconos en `assets/icons/*.svg` — son placeholders monograma, cámbialos por SVGs oficiales si quieres.
+4. Rebuild: `npm run build` y commit de `dist/output.css` (necesario para GitHub Pages sin CI).
 
 ## Deploy GitHub Pages
 

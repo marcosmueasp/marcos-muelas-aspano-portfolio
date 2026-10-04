@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark crt-on">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,22 +13,17 @@
       var t = localStorage.getItem('theme');
       if (t === 'light') document.documentElement.classList.remove('dark');
       else document.documentElement.classList.add('dark');
-      var c = localStorage.getItem('crt');
-      if (c === 'off') document.documentElement.classList.remove('crt-on');
-      else document.documentElement.classList.add('crt-on');
-    } catch (e) { document.documentElement.classList.add('dark', 'crt-on'); }
+    } catch (e) { document.documentElement.classList.add('dark'); }
   </script>
   <link rel="stylesheet" href="./dist/output.css">
   <script src="./js/main.js" defer></script>
 </head>
 <body class="bg-paper text-stone-900 dark:bg-[#0a0f0a] dark:text-green-300 min-h-screen font-mono">
-  <div class="crt-overlay" aria-hidden="true"></div>
-  <div class="crt-vignette" aria-hidden="true"></div>
 
   <header class="sticky top-0 z-40 border-b border-stone-300 dark:border-green-900/60 bg-paper/90 dark:bg-black/80 backdrop-blur">
     <nav class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between gap-2" aria-label="Main">
-      <a href="#top" class="phosphor font-bold tracking-tight text-sm sm:text-base">
-        Marcos Muelas Aspano
+      <a href="#top" class="font-bold tracking-tight text-sm sm:text-base">
+        Marcos Muelas
       </a>
       <div class="hidden md:flex items-center gap-5 text-sm">
         <a href="#how-i-work" class="hover:underline">How I work</a>
@@ -41,7 +36,6 @@
       <div class="flex items-center gap-2 text-xs">
         <a href="./index.html" data-lang-link="es" class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded" hreflang="es">ES</a>
         <button data-theme-toggle class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-pressed="true" title="Light / dark"><span data-theme-label>Dark</span></button>
-        <button data-crt-toggle class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded hidden sm:block" aria-pressed="true" title="CRT effect"><span data-crt-label>CRT enabled</span></button>
         <button data-menu-btn class="md:hidden px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-expanded="false" aria-label="Open menu">Menu</button>
       </div>
     </nav>
@@ -58,8 +52,8 @@
   <main id="top" class="relative z-10 max-w-5xl mx-auto px-4 pb-20">
     <section class="py-12 sm:py-16 grid md:grid-cols-[1.2fr_.8fr] gap-8 items-center">
       <div>
-        <p class="text-xs sm:text-sm border border-stone-400 dark:border-green-700 rounded-full inline-block px-3 py-1 mb-4">Open to new opportunities</p>
-        <h1 class="phosphor crt-flicker text-3xl sm:text-5xl font-bold leading-tight">
+        <p class="text-xs sm:text-sm border border-stone-400 dark:border-green-700 rounded-full inline-flex items-center gap-2 px-3 py-1 mb-4"><span class="w-2 h-2 rounded-full bg-green-600 dark:bg-green-400 animate-pulse" aria-hidden="true"></span>Open to new opportunities</p>
+        <h1 class="text-3xl sm:text-5xl font-bold leading-tight">
           Marcos Muelas Aspano<br>
           <span class="text-lg sm:text-2xl font-normal">Full-Stack Java + Angular Developer</span>
         </h1>
@@ -74,7 +68,7 @@
         </div>
         <p class="mt-4 text-xs opacity-70">Location: Valencia, Spain · Remote/Hybrid · ES/VA/EN</p>
       </div>
-      <div class="border border-stone-400 dark:border-green-700 rounded-lg bg-white dark:bg-black/50 card-glow text-xs sm:text-sm overflow-hidden">
+      <div class="border border-stone-400 dark:border-green-700 rounded-lg bg-white dark:bg-black/50 text-xs sm:text-sm overflow-hidden">
         <div class="border-b border-stone-300 dark:border-green-900/60 px-3 py-2 flex gap-1.5" aria-hidden="true">
           <span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-yellow-500 inline-block"></span>
@@ -91,39 +85,39 @@
     </section>
 
     <section id="how-i-work" class="py-10 scroll-mt-16">
-      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">How I work</h2>
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">How I work</h2>
       <p class="text-sm opacity-80 mb-6">End to end, with quality and no over-engineering. Agile and Scrum, SOLID and clean code.</p>
       <div class="grid sm:grid-cols-2 gap-4">
-        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
           <h3 class="font-bold mb-1">End to end features</h3>
           <p class="text-sm opacity-80">Full cycle: backend and frontend, deployment and production release. Code another dev understands in 5 min.</p>
         </article>
-        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
           <h3 class="font-bold mb-1">Testing and QA</h3>
           <p class="text-sm opacity-80">Backend and frontend testing, test plans and cross-testing. Confidence to refactor and deploy.</p>
         </article>
-        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
           <h3 class="font-bold mb-1">Integration and quality</h3>
           <p class="text-sm opacity-80">CI/CD, code quality analysis and proactive incident resolution. Pipelines that warn before breaking prod.</p>
         </article>
-        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
           <h3 class="font-bold mb-1">Team and organization</h3>
-          <p class="text-sm opacity-80">Scrum/Kanban, Jira, decision docs and API contracts. Effective communication, time management and continuous learning.</p>
+          <p class="text-sm opacity-80">Scrum/Kanban, Jira, decision docs and API contracts. Effective communication, time management and continuous learning. I enjoy teamwork, helping colleagues and learning from them.</p>
         </article>
       </div>
     </section>
 
     <section id="education" class="py-10 scroll-mt-16">
-      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">Education and languages</h2>
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">Education and languages</h2>
       <p class="text-sm opacity-80 mb-6">Academic background and communication in three languages.</p>
       <div class="grid md:grid-cols-2 gap-4">
-        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
           <h3 class="font-bold mb-2">Education</h3>
           <p class="font-bold text-sm">B.Sc. in Computer Engineering</p>
           <p class="text-sm opacity-80">Universitat Politècnica de València (UPV) — Alcoy Campus | 2019 — 2023</p>
           <p class="text-sm opacity-80 mt-2">Methodologies: Scrum, Kanban, QA (test plans and cross-testing). SOLID principles and clean code.</p>
         </article>
-        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
           <h3 class="font-bold mb-2">Languages and skills</h3>
           <ul class="text-sm opacity-90 space-y-1">
             <li>Spanish — native</li>
@@ -136,7 +130,7 @@
     </section>
 
     <section id="experience" class="py-10 scroll-mt-16">
-      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">Experience</h2>
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">Experience</h2>
       <p class="text-sm opacity-80 mb-6">Over 2 years in web apps for public administration and private companies.</p>
       <ol class="relative border-l border-stone-300 dark:border-green-800 ml-2 space-y-6">
         
@@ -168,10 +162,10 @@
     </section>
 
     <section id="projects" class="py-10 scroll-mt-16">
-      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">Personal projects</h2>
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">Personal projects</h2>
       <p class="text-sm opacity-80 mb-6">Live in production and open source.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow flex flex-col">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 flex flex-col">
           <h3 class="font-bold">Let's Focus — Pomodoro</h3>
           <p class="text-sm opacity-80 mt-1 flex-1">Priority-based productivity app using the Pomodoro technique for personal use. Published on the Play Store.</p>
           <p class="text-xs mt-2 opacity-70">React Native · Expo · Tailwind · Supabase</p>
@@ -179,16 +173,16 @@
             <a href="https://play.google.com/store/apps/details?id=com.letsfocus.app" class="underline">Play Store</a>
           </div>
         </article>
-        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow flex flex-col">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 flex flex-col">
           <h3 class="font-bold">This portfolio</h3>
-          <p class="text-sm opacity-80 mt-1 flex-1">This site: HTML5 + Tailwind CLI, 100% static, ES/EN, light/dark, CRT effect. Lighthouse &gt;95.</p>
+          <p class="text-sm opacity-80 mt-1 flex-1">This site: HTML5 + Tailwind CLI, 100% static, ES/EN, light/dark. Lighthouse &gt;95.</p>
           <p class="text-xs mt-2 opacity-70">HTML5 · Tailwind · JavaScript</p>
           <div class="mt-3 flex gap-3 text-sm">
             <a href="https://github.com/YOUR_USER" class="underline">Code</a>
             <a href="#top" class="underline opacity-60">Demo</a>
           </div>
         </article>
-        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow flex flex-col">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 flex flex-col">
           <h3 class="font-bold">More on GitHub</h3>
           <p class="text-sm opacity-80 mt-1 flex-1">Experiments with Java, Angular, testing and quality. Ask me about private company repos (not publishable due to confidentiality).</p>
           <p class="text-xs mt-2 opacity-70">Java · Angular · JUnit · SonarQube</p>
@@ -200,96 +194,91 @@
     </section>
 
     <section id="tech" class="py-10 scroll-mt-16">
-      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">Technologies</h2>
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">Technologies</h2>
       <p class="text-sm opacity-80 mb-6">What I use daily, plus Scrum, Kanban and QA methodologies.</p>
 
       <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">Frontend</h3>
       <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/angular.svg" alt="Angular" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Angular</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/vue.svg" alt="Vue" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Vue</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/typescript.svg" alt="TypeScript" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">TypeScript</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/javascript.svg" alt="JavaScript" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JavaScript</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/jest.svg" alt="Jest" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Jest</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/react-native.svg" alt="React Native" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">React Native</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/expo.svg" alt="Expo" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Expo</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/tailwind.svg" alt="Tailwind CSS" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Tailwind</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/thymeleaf.svg" alt="Thymeleaf" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Thymeleaf</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/bootstrap.svg" alt="Bootstrap" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Bootstrap</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/zk.svg" alt="ZK Framework" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">ZK</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/angular.svg" alt="Angular" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Angular</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/vue.svg" alt="Vue" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Vue</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/typescript.svg" alt="TypeScript" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">TypeScript</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/javascript.svg" alt="JavaScript" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JavaScript</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/jest.svg" alt="Jest" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Jest</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/react-native.svg" alt="React Native" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">React Native</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/expo.svg" alt="Expo" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Expo</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/tailwind.svg" alt="Tailwind CSS" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Tailwind</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/thymeleaf.svg" alt="Thymeleaf" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Thymeleaf</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/bootstrap.svg" alt="Bootstrap" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Bootstrap</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/zk.svg" alt="ZK Framework" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">ZK</p></div>
       </div>
 
       <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">Backend</h3>
       <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/java.svg" alt="Java" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Java 8/17</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/spring-boot.svg" alt="Spring Boot" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Spring Boot</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/jpa-hibernate.svg" alt="JPA Hibernate" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JPA/Hibernate</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/rest.svg" alt="REST APIs" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">REST</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/maven.svg" alt="Maven" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Maven</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/mockito.svg" alt="Mockito" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Mockito</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/junit.svg" alt="JUnit" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JUnit</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/java.svg" alt="Java" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Java 8/17</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/spring-boot.svg" alt="Spring Boot" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Spring Boot</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/jpa-hibernate.svg" alt="JPA Hibernate" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JPA/Hibernate</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/rest.svg" alt="REST APIs" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">REST</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/maven.svg" alt="Maven" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Maven</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/mockito.svg" alt="Mockito" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Mockito</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/junit.svg" alt="JUnit" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">JUnit</p></div>
       </div>
 
       <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">Quality and CI</h3>
       <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/jenkins.svg" alt="Jenkins" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Jenkins</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/sonarqube.svg" alt="SonarQube" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SonarQube</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/gitlab-cicd.svg" alt="GitLab CI/CD" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">GitLab CI/CD</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/git.svg" alt="Git" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Git</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/jenkins.svg" alt="Jenkins" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Jenkins</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/sonarqube.svg" alt="SonarQube" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SonarQube</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/gitlab-cicd.svg" alt="GitLab CI/CD" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">GitLab CI/CD</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/git.svg" alt="Git" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Git</p></div>
       </div>
 
       <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">Databases</h3>
       <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/oracle.svg" alt="Oracle SQL" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Oracle SQL</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/sqldeveloper.svg" alt="SQL Developer" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SQL Dev</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/mysql.svg" alt="MySQL" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">MySQL</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/postgresql.svg" alt="PostgreSQL" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">PostgreSQL</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/supabase.svg" alt="Supabase" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Supabase</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/oracle.svg" alt="Oracle SQL" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Oracle SQL</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/sqldeveloper.svg" alt="SQL Developer" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SQL Dev</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/mysql.svg" alt="MySQL" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">MySQL</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/postgresql.svg" alt="PostgreSQL" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">PostgreSQL</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/supabase.svg" alt="Supabase" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Supabase</p></div>
       </div>
 
       <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">Tools</h3>
       <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/svn.svg" alt="SVN" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SVN</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/postman.svg" alt="Postman" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Postman</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/jira.svg" alt="Jira" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Jira</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/obsidian.svg" alt="Obsidian" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Obsidian</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/warp.svg" alt="Warp" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Warp</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/opencode.svg" alt="OpenCode" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">OpenCode</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/github-copilot.svg" alt="GitHub Copilot" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">GitHub Copilot</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/claude.svg" alt="Claude" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Claude</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/gpt.svg" alt="GPT" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">GPT</p></div>
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40 crt-surface"><img src="./assets/icons/deepseek.svg" alt="DeepSeek" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">DeepSeek</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/svn.svg" alt="SVN" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SVN</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/postman.svg" alt="Postman" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Postman</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/jira.svg" alt="Jira" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Jira</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/obsidian.svg" alt="Obsidian" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Obsidian</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/warp.svg" alt="Warp" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Warp</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/opencode.svg" alt="OpenCode" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">OpenCode</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/github-copilot.svg" alt="GitHub Copilot" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">GitHub Copilot</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/claude.svg" alt="Claude" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Claude</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/gpt.svg" alt="GPT" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">GPT</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/deepseek.svg" alt="DeepSeek" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">DeepSeek</p></div>
       </div>
     </section>
 
     <section id="contact" class="py-10 scroll-mt-16">
-      <h2 class="phosphor text-xl sm:text-2xl font-bold mb-2">Contact</h2>
-      <p class="text-sm opacity-80 mb-6">I reply within 24-48h. For recruiters: direct email, LinkedIn and CV.</p>
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">Contact</h2>
+      <p class="text-sm opacity-80 mb-6">I reply within 24-48h. For safety I don't publish my email: use LinkedIn or the form.</p>
       <div class="grid md:grid-cols-2 gap-4">
-        <div class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow">
-          <h3 class="font-bold mb-3">Direct contact</h3>
-          <p class="text-sm break-all">
-            <a href="mailto:YOUR_EMAIL@example.com" class="underline font-bold">YOUR_EMAIL@example.com</a>
-          </p>
+        <div class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
+          <h3 class="font-bold mb-3">Direct channels</h3>
+          <p class="text-sm opacity-80">Message me on LinkedIn, browse my GitHub or download my CV. No spam: my email is not on this site.</p>
           <div class="mt-3 flex flex-wrap gap-2 text-sm">
-            <a href="mailto:YOUR_EMAIL@example.com?subject=Portfolio%20contact" class="px-3 py-1.5 bg-stone-900 text-white dark:bg-green-500 dark:text-black rounded">Send email</a>
-            <button data-copy-email="YOUR_EMAIL@example.com" data-ok-text="Copied!" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded">Copy</button>
-          </div>
-          <p data-copy-msg class="text-xs mt-2 h-4"></p>
-          <div class="mt-2 flex flex-wrap gap-2 text-sm">
-            <a href="https://linkedin.com/in/YOUR_USER" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded">LinkedIn</a>
+            <a href="https://linkedin.com/in/YOUR_USER" class="px-3 py-1.5 bg-stone-900 text-white dark:bg-green-500 dark:text-black rounded">LinkedIn</a>
             <a href="https://github.com/YOUR_USER" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded">GitHub</a>
             <a href="./assets/cv.pdf" class="px-3 py-1.5 border border-stone-400 dark:border-green-700 rounded" download>Download CV</a>
           </div>
+          <p class="text-xs opacity-60 mt-3">Valencia, Spain · Remote/Hybrid · ES/VA/EN</p>
         </div>
-        <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST" class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 card-glow text-sm">
+        <!-- TODO: create a free form at https://formspree.io and paste your ID in the action. Your email stays in Formspree only, never in this repo. -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 text-sm">
           <h3 class="font-bold mb-3">Send me a message</h3>
           <input type="hidden" name="_subject" value="Portfolio contact">
-          <input type="hidden" name="_captcha" value="false">
           <label class="block mb-3">Name<input required name="name" class="mt-1 w-full bg-transparent border border-stone-300 dark:border-green-900 rounded px-3 py-2" placeholder="Your name"></label>
           <label class="block mb-3">Email<input required type="email" name="email" class="mt-1 w-full bg-transparent border border-stone-300 dark:border-green-900 rounded px-3 py-2" placeholder="you@email.com"></label>
           <label class="block mb-3">Message<textarea required name="message" rows="4" class="mt-1 w-full bg-transparent border border-stone-300 dark:border-green-900 rounded px-3 py-2" placeholder="Hi Marcos, ..."></textarea></label>
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="w-full px-4 py-2 bg-stone-900 text-white dark:bg-green-500 dark:text-black rounded font-bold">Send message</button>
-          <p class="text-xs opacity-60 mt-2">Enable the form by replacing YOUR_EMAIL with your email in the action (FormSubmit, free).</p>
+          <p class="text-xs opacity-60 mt-2">Your details are only used to reply to your message.</p>
         </form>
       </div>
     </section>

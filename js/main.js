@@ -1,5 +1,5 @@
-// Portfolio JS - vanilla, sin dependencias (~60 líneas)
-// Tema claro/oscuro + CRT + menú móvil + copiar email + año
+// Portfolio JS - vanilla, sin dependencias
+// Tema claro/oscuro + menú móvil + copiar email + año + idioma
 (function () {
   const root = document.documentElement;
 
@@ -14,7 +14,7 @@
   }
 
   // --- Estado inicial (antes de pintar para evitar flash) ---
-  // El script inline del <head> ya pone .dark / .crt-on, aquí sincronizamos botones.
+  // El script inline del <head> ya pone .dark, aquí sincronizamos botones.
 
   function getTheme() {
     return root.classList.contains('dark') ? 'dark' : 'light';
@@ -34,21 +34,6 @@
     });
   }
 
-  function setCrt(on) {
-    if (on) root.classList.add('crt-on');
-    else root.classList.remove('crt-on');
-    try { localStorage.setItem('crt', on ? 'on' : 'off'); } catch (e) {}
-    document.querySelectorAll('[data-crt-toggle]').forEach(function (btn) {
-      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-      const label = btn.querySelector('[data-crt-label]');
-      const isEn = document.documentElement.lang === 'en';
-      if (label) {
-        if (on) label.textContent = isEn ? 'CRT enabled' : 'CRT activado';
-        else label.textContent = isEn ? 'CRT disabled' : 'CRT desactivado';
-      }
-    });
-  }
-
   // --- Listeners ---
   document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -56,15 +41,8 @@
     });
   });
 
-  document.querySelectorAll('[data-crt-toggle]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      setCrt(!root.classList.contains('crt-on'));
-    });
-  });
-
   // Sincronizar UI al cargar
   setTheme(getTheme());
-  setCrt(root.classList.contains('crt-on'));
 
   // Cambiar de idioma conservando la sección visible (ES <-> EN)
   var ES_TO_EN = {
@@ -104,29 +82,6 @@
       });
     });
   }
-
-  // Copiar email
-  document.querySelectorAll('[data-copy-email]').forEach(function (btn) {
-    btn.addEventListener('click', async function () {
-      const email = btn.getAttribute('data-copy-email') || '';
-      const msg = btn.parentElement ? btn.parentElement.querySelector('[data-copy-msg]') : null;
-      try {
-        await navigator.clipboard.writeText(email);
-        if (msg) {
-          msg.textContent = btn.dataset.okText || (document.documentElement.lang === 'en' ? 'Copied!' : '¡Copiado!');
-          setTimeout(function () { msg.textContent = ''; }, 2000);
-        }
-      } catch (e) {
-        // fallback: seleccionar texto
-        const ta = document.createElement('textarea');
-        ta.value = email;
-        document.body.appendChild(ta);
-        ta.select();
-        try { document.execCommand('copy'); } catch (err) {}
-        document.body.removeChild(ta);
-      }
-    });
-  });
 
   // Año footer
   document.querySelectorAll('[data-year]').forEach(function (el) {
