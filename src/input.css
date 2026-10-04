@@ -17,7 +17,8 @@
 
 /* ===== Efecto CRT / fósforo ===== */
 @layer components {
-  /* Scanlines + viñeta solo cuando CRT activo (al fondo, no tapa el texto) */
+  /* Scanlines DEBAJO de todo el contenido:
+     líneas finas de 1px con contraste alto para que se noten */
   .crt-on .crt-overlay {
     opacity: 1;
   }
@@ -28,13 +29,22 @@
     inset: 0;
     z-index: 0;
     transition: opacity 0.3s ease;
-    /* scanlines finas (1px) */
     background: repeating-linear-gradient(
       to bottom,
       transparent 0px,
-      transparent 2px,
-      rgba(0, 0, 0, 0.06) 2px,
-      rgba(0, 0, 0, 0.06) 3px
+      transparent 3px,
+      rgba(0, 0, 0, 0.32) 3px,
+      rgba(0, 0, 0, 0.32) 4px
+    );
+  }
+  /* En modo oscuro el fondo ya es casi negro: más contraste en las líneas */
+  .dark.crt-on .crt-overlay {
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 3px,
+      rgba(0, 0, 0, 0.5) 3px,
+      rgba(0, 0, 0, 0.5) 4px
     );
   }
   .crt-on .crt-vignette {
@@ -47,7 +57,7 @@
     inset: 0;
     z-index: 0;
     transition: opacity 0.3s ease;
-    background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.22) 100%);
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.32) 100%);
   }
 
   /* Glow fósforo solo en dark + CRT */
@@ -94,4 +104,27 @@
   html {
     scroll-behavior: auto;
   }
+}
+
+/* Como las scanlines quedan DEBAJO de todo, las superficies se vuelven
+   translúcidas en modo CRT para que las líneas se vean a través.
+   El texto queda siempre nítido porque se pinta encima de su tarjeta.
+   (Sin @layer a propósito: debe imponerse a las utilidades de Tailwind.) */
+.crt-on .card-glow {
+  background-color: rgb(255 255 255 / 0.55);
+}
+.dark.crt-on .card-glow {
+  background-color: rgb(0 0 0 / 0.25);
+}
+.crt-on .crt-surface {
+  background-color: rgb(255 255 255 / 0.55);
+}
+.dark.crt-on .crt-surface {
+  background-color: rgb(0 0 0 / 0.25);
+}
+.crt-on header {
+  background-color: rgb(244 241 232 / 0.72);
+}
+.dark.crt-on header {
+  background-color: rgb(0 0 0 / 0.55);
 }
