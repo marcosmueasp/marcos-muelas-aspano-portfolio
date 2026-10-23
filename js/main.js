@@ -31,6 +31,9 @@
     });
     document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
       btn.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
+      btn.setAttribute('aria-label', isEn
+        ? (mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode')
+        : (mode === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'));
     });
   }
 
@@ -51,6 +54,8 @@
     'proyectos': 'projects',
     'tech': 'tech',
     'formacion': 'education',
+    'certificados': 'certificates',
+    'lecturas': 'readings',
     'contacto': 'contact',
     'top': 'top'
   };

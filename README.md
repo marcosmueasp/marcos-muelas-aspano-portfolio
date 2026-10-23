@@ -8,7 +8,7 @@ Desarrollador Full-Stack/Backend · Valencia, España. Portfolio personal con mi
 
 ## Qué contiene
 
-- Cómo trabajo · Formación e idiomas · Experiencia · Proyectos personales · Tecnologías con logos oficiales · Contacto
+- Cómo trabajo · Formación e idiomas · Certificados · Experiencia · Proyectos personales · Tecnologías con logos oficiales · Lecturas realizadas · Contacto
 - Español e inglés, modo claro/oscuro con memoria, diseño responsive
 
 ## Stack

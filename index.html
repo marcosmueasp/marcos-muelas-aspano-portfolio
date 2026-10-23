@@ -26,27 +26,31 @@
       <a href="#top" class="font-bold tracking-tight text-sm sm:text-base">
         Marcos Muelas Aspano
       </a>
-      <div class="hidden md:flex items-center gap-5 text-sm">
-        <a href="#como-trabajo" class="hover:underline">Cómo trabajo</a>
-        <a href="#formacion" class="hover:underline">Formación</a>
-        <a href="#experiencia" class="hover:underline">Experiencia</a>
-        <a href="#proyectos" class="hover:underline">Proyectos</a>
-        <a href="#tech" class="hover:underline">Tecnologías</a>
-        <a href="#contacto" class="px-3 py-1 border border-stone-400 dark:border-green-700 rounded hover:bg-stone-900 hover:text-white dark:hover:bg-green-500 dark:hover:text-black">Contacto</a>
+      <div class="hidden lg:flex items-center gap-3 text-xs">
+        <a href="#como-trabajo" class="hover:underline whitespace-nowrap">Cómo trabajo</a>
+        <a href="#formacion" class="hover:underline whitespace-nowrap">Formación</a>
+        <a href="#certificados" class="hover:underline whitespace-nowrap">Certificados</a>
+        <a href="#experiencia" class="hover:underline whitespace-nowrap">Experiencia</a>
+        <a href="#proyectos" class="hover:underline whitespace-nowrap">Proyectos</a>
+        <a href="#tech" class="hover:underline whitespace-nowrap">Tecnologías</a>
+        <a href="#lecturas" class="hover:underline whitespace-nowrap">Lecturas</a>
+        <a href="#contacto" class="whitespace-nowrap px-3 py-1 border border-stone-400 dark:border-green-700 rounded hover:bg-stone-900 hover:text-white dark:hover:bg-green-500 dark:hover:text-black">Contacto</a>
       </div>
       <div class="flex items-center gap-2 text-xs">
         <!-- TODO: idioma: en.html es la versión en inglés -->
         <a href="./en.html" data-lang-link="en" class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded" hreflang="en">EN</a>
-        <button data-theme-toggle class="px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-pressed="false" title="Claro / oscuro"><span data-theme-label>Claro</span></button>
-        <button data-menu-btn class="md:hidden px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-expanded="false" aria-label="Abrir menú">Menú</button>
+        <button data-theme-toggle class="inline-flex items-center gap-1.5 px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-pressed="false" aria-label="Cambiar a modo oscuro" title="Claro / oscuro"><svg class="w-4 h-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><svg class="hidden dark:block w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-theme-label>Claro</span></button>
+        <button data-menu-btn class="lg:hidden px-2 py-1 border border-stone-400 dark:border-green-700 rounded" aria-expanded="false" aria-label="Abrir menú">Menú</button>
       </div>
     </nav>
-    <div data-mobile-menu class="hidden md:hidden border-t border-stone-300 dark:border-green-900/60 px-4 py-3 flex-col gap-2 text-sm bg-paper dark:bg-black">
+    <div data-mobile-menu class="hidden lg:hidden border-t border-stone-300 dark:border-green-900/60 px-4 py-3 flex-col gap-2 text-sm bg-paper dark:bg-black">
       <a href="#como-trabajo">Cómo trabajo</a>
       <a href="#formacion">Formación</a>
+      <a href="#certificados">Certificados</a>
       <a href="#experiencia">Experiencia</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#tech">Tecnologías</a>
+      <a href="#lecturas">Lecturas</a>
       <a href="#contacto">Contacto</a>
     </div>
   </header>
@@ -124,12 +128,56 @@
         </article>
         <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
           <h3 class="font-bold mb-2">Idiomas y competencias</h3>
-          <ul class="text-sm opacity-90 space-y-1">
-            <li>Español — nativo</li>
-            <li>Valenciano — nativo</li>
-            <li>Inglés — B2 (First)</li>
-          </ul>
+          <div class="space-y-3 text-sm">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <span>Español</span><span class="text-xs opacity-70">Nativo</span>
+              </div>
+              <div class="h-2 rounded-full bg-stone-200 dark:bg-green-900/50 overflow-hidden" role="progressbar" aria-label="Español" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="h-full rounded-full bg-green-600 dark:bg-green-400" style="width: 100%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <span>Valenciano</span><span class="text-xs opacity-70">Nativo</span>
+              </div>
+              <div class="h-2 rounded-full bg-stone-200 dark:bg-green-900/50 overflow-hidden" role="progressbar" aria-label="Valenciano" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="h-full rounded-full bg-green-600 dark:bg-green-400" style="width: 100%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <span>Inglés</span><span class="text-xs opacity-70">B2 (First)</span>
+              </div>
+              <div class="h-2 rounded-full bg-stone-200 dark:bg-green-900/50 overflow-hidden" role="progressbar" aria-label="Inglés" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
+                <div class="h-full rounded-full bg-green-600 dark:bg-green-400" style="width: 67%"></div>
+              </div>
+            </div>
+          </div>
           <p class="text-sm opacity-80 mt-3">Compromiso con la calidad y los plazos · trabajo en equipo · resolución de problemas · organización · aprendizaje continuo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICADOS ===== -->
+    <section id="certificados" class="py-10 scroll-mt-16">
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">Certificados</h2>
+      <p class="text-sm opacity-80 mb-6">Formación complementaria en inteligencia artificial y desarrollo.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
+          <p class="inline-flex items-center gap-1.5 text-xs opacity-90"><span class="w-2 h-2 rounded-full bg-green-600 dark:bg-green-400" aria-hidden="true"></span>Certificado</p>
+          <h3 class="font-bold mt-2">Curso de Iniciación al Desarrollo con IA</h3>
+          <p class="text-xs opacity-70 mt-1">23 de octubre de 2026</p>
+        </article>
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
+          <p class="inline-flex items-center gap-1.5 text-xs opacity-90"><span class="w-2 h-2 rounded-full bg-green-600 dark:bg-green-400" aria-hidden="true"></span>IBM</p>
+          <h3 class="font-bold mt-2">Introducción a la Inteligencia Artificial de Watson</h3>
+          <p class="text-xs opacity-70 mt-1">14 de agosto de 2021</p>
+        </article>
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40">
+          <p class="inline-flex items-center gap-1.5 text-xs opacity-90"><span class="w-2 h-2 rounded-full bg-green-600 dark:bg-green-400" aria-hidden="true"></span>IBM</p>
+          <h3 class="font-bold mt-2">Inteligencia Artificial para todos: Domina las bases</h3>
+          <p class="text-xs opacity-70 mt-1">22 de julio de 2021</p>
         </article>
       </div>
     </section>
@@ -199,7 +247,7 @@
         </article>
         <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 flex flex-col">
           <h3 class="font-bold">Más en GitHub</h3>
-          <p class="text-sm opacity-80 mt-1 flex-1">Experimentos con Java, Angular, testing y calidad. Pregúntame por repos privados de empresa (no publicables por confidencialidad).</p>
+          <p class="text-sm opacity-80 mt-1 flex-1">Experimentos con Java, Angular, testing y calidad.</p>
           <p class="text-xs mt-2 opacity-70">Java · Angular · JUnit · SonarQube</p>
           <div class="mt-3 flex gap-3 text-sm">
             <a href="https://github.com/marcosmueasp" class="underline">GitHub</a>
@@ -215,6 +263,8 @@
 
       <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">Frontend</h3>
       <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/html.svg" alt="HTML5" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">HTML5</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/css.svg" alt="CSS" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">CSS</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/angular.svg" alt="Angular" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Angular</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/vue.svg" alt="Vue" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Vue</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/typescript.svg" alt="TypeScript" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">TypeScript</p></div>
@@ -247,6 +297,7 @@
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/sonarqube.svg" alt="SonarQube" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SonarQube</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/gitlab-cicd.svg" alt="GitLab CI/CD" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">GitLab CI/CD</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/git.svg" alt="Git" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Git</p></div>
+        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/svn.svg" alt="SVN" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SVN</p></div>
       </div>
 
       <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">Bases de datos</h3>
@@ -260,7 +311,6 @@
 
       <h3 class="text-sm font-bold mt-6 mb-3 opacity-80">Herramientas</h3>
       <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
-        <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/svn.svg" alt="SVN" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">SVN</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/postman.svg" alt="Postman" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Postman</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/jira.svg" alt="Jira" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Jira</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/obsidian.svg" alt="Obsidian" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Obsidian</p></div>
@@ -270,6 +320,19 @@
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/claude.svg" alt="Claude" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">Claude</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/gpt.svg" alt="GPT" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">GPT</p></div>
         <div class="border border-stone-300 dark:border-green-900 rounded p-3 text-center bg-white dark:bg-black/40"><img src="./assets/icons/deepseek.svg" alt="DeepSeek" class="w-10 h-10 mx-auto" loading="lazy"><p class="text-xs mt-2">DeepSeek</p></div>
+      </div>
+    </section>
+
+    <!-- ===== LECTURAS ===== -->
+    <section id="lecturas" class="py-10 scroll-mt-16">
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">Lecturas realizadas</h2>
+      <p class="text-sm opacity-80 mb-6">Libros técnicos que he leído.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <article class="border border-stone-300 dark:border-green-900 rounded-lg p-5 bg-white dark:bg-black/40 flex flex-col">
+          <img src="./assets/Spring boot up &amp; running.png" alt="Portada de Spring Boot: Up and Running" class="w-full max-w-[190px] mx-auto rounded border border-stone-300 dark:border-green-900" loading="lazy">
+          <h3 class="font-bold mt-4">Spring Boot: Up and Running</h3>
+          <p class="text-sm opacity-80 mt-1">Mark Heckler</p>
+        </article>
       </div>
     </section>
 
